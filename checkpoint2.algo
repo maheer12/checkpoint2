@@ -1,0 +1,77 @@
+ALGORITHM DOT PRODUCT  //TASK1//
+
+VAR
+    n: INTEGER;
+    c: tab [n][2];
+    
+
+BEGIN
+    FOR i FROM 0 TO chain length-1  DO
+        write ("element",i+1,"of the first value ");
+        read    ( c[i][1]);
+        write ("element" , i+1, "of the second value " );
+        read (c[i][2]);
+    END_FOR
+    
+    
+
+END
+
+VAR 
+sca : INTEGER:=0;
+BEGIN
+    write(" orthogonal vertors  ");
+    FOR i form 0 to n-1 step 1 do
+            VAR tmp : INTEGER:=0;
+            tmp := dot_product(c[i][1],c[i][2]);
+            if tmp = 0 then
+                write(c[i][1], " et ", c[i][2], " ; ");
+            end_if          
+        END_For 
+    END
+
+
+FUNCTION dot_product(v1,v2) : INTEGER
+VAR
+    test:BOOLEAN
+    ps:= INTEGER;
+BEGIN
+    ps:= v1[0]*v2[0]+v1[1]*v2[1;];
+    IF (ps==0) THEN
+        test : "true"
+    
+    END_IF
+    
+    RETURN ps ;
+END
+
+
+ALGORITHM checkpoint 2 //task2//
+
+VAR
+    i,rep: INTEGER;
+    tab : ARRAY_OF INTEGER[];
+BEGIN
+    
+    for i from 0 to length-1 do
+        read("write the number");
+        write(tab[i]);
+    END_For
+    write("Enter the value");
+    read(value);
+    WHILE (i<length) DO
+            if tab[i]>value then
+            res := tab[i];
+            tab[i] := value;
+            tab[i+1] := res;
+            i++;
+            end_if
+        for j from i to length-1 do
+            if tab[i]>tab[j] then
+            rep:=tab[i];
+            tab[i]:=tab[j];
+            tab[j]:=rep;
+        END_For
+    END_WHILE
+
+END
